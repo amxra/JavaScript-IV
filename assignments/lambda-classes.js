@@ -34,3 +34,27 @@ class Instructor extends Person {
     }
 }
 
+class Student extends Person {
+    constructor (previousBackground, className, favSubjects){
+        super(name);
+        this.previousBackground = previousBackground;
+        this.className = className;
+        this.favSubjects = favSubjects;
+    }
+
+    listsSubjects (subject){
+        this.favSubjects.forEach(subject => console.log(subject));
+        ;
+    }
+
+    prAssignment (subject){
+        return `${this.name} has submitted a PR for ${subject}`
+    }
+
+    sprintChallenge (subject){
+        return `${this.name} has begun sprint challenge on ${subject}`
+    }
+}
+
+
+
