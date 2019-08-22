@@ -17,3 +17,20 @@ class Person {
 // console.log(amira.speak());
 
 
+class Instructor extends Person {
+    constructor (specialty, favLanguage, catchPhrase){
+        super(name);
+        this.specialty = specialty;
+        this.favLanguage = favLanguage;
+        this.catchPhrase = catchPhrase;
+    }
+
+    demo (subject){
+        return `Today we are learning about ${subject}`
+    }
+
+    grade (student, subject){
+        return '{student.name} receives a perfect score on ${subject}'
+    }
+}
+
