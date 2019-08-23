@@ -30,9 +30,18 @@ class Instructor extends Person {
     }
 
     grade (student, subject){
-        return '{student.name} receives a perfect score on ${subject}'
+        return `${student} recieves a perfect score on ${subject}`
     }
 }
+
+
+
+// const amira = new Instructor('amira');
+
+//  console.log(amira.demo('JavaScript'));
+//  console.log(amira.grade('Dimeji', 'JavaScript'));
+ 
+
 
 class Student extends Person {
     constructor (previousBackground, className, favSubjects){
@@ -47,14 +56,17 @@ class Student extends Person {
         ;
     }
 
-    prAssignment (subject){
-        return `${this.name} has submitted a PR for ${subject}`
+    PRAssignment (name, subject){
+        return `${name} has submitted a PR for ${subject}`
     }
 
     sprintChallenge (subject){
         return `${this.name} has begun sprint challenge on ${subject}`
     }
 }
+
+// const dimeji = new Student ('dimeji');
+// console.log(dimeji.PRAssignment('dimeji','math'))
 
 
 class ProjectManager extends Instructor {
@@ -72,4 +84,8 @@ class ProjectManager extends Instructor {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
 
 }
+}
 
+const tobi = new ProjectManager ('tobi')
+
+console.log(tobi.debugsCode('tobi', 'JavaScript', 'class' ))
